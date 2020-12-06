@@ -1,0 +1,94 @@
+class Ground extends to Base Class
+box class extends to Box Class
+
+var polygon 
+var box 
+
+var score = 0;
+
+text("SCORE : "+score,750,40);
+
+function setup(){
+    var canvas = createCanvas(1200,400);
+    engine = Engine.create();
+    world = engine.world;
+
+
+
+    attach(body){
+        this.sling.bodyA = body;
+    }
+    
+    fly(){
+        this.sling.bodyA = null;
+    }
+
+
+// level two 
+block 8 = new Block(330,235,30,40);
+block 9 = new Block(360,235,30,40);
+block 10 = new Block(390,235,30,40);
+block 11 = new Block(420,235,30,40);
+block 12 = new Block(450,235,,30,40);
+// level three
+block 13 = new Block(360,195,30,40);
+block 14 = new Block(390,195,30,40);
+block 15 = new Block(420,195,30,40);
+// top
+block 16 = new Block(390,155,30,40);
+
+
+
+score();
+
+blocks1.score();
+blocks2.score();
+blocks3.score();
+blocks4.score();
+blocks5.score();
+blocks6.score();
+blocks7.score();
+blocks8.score();
+blocks9.score();
+
+
+fetch();
+backroundImage(light)
+
+
+
+// polygon holder with slings
+polygon = Bodies.circle(50,200,20);
+World.add(world,polygon);
+
+
+function mouseReleased(){
+    slingshot.fly();    
+    slingShot =new Slingshot(this.polygon,{x:100,y:200});
+
+    function mouseDragged(){
+        
+    }
+
+
+function keyPressed (){
+    if (keyCode === 32){
+        slingShot.attach(this.polygon)
+    }
+}
+
+this.Visiblity = this.Visiblity -6;
+
+
+
+
+push(); 
+translate(70, 0);
+strokeWeight(20);
+fill(225, 158, 7);
+ellipse(22, 60, 45, 36); 
+pop();
+
+imageMode(CENTER)
+image(polygon_img, polygon.position.x,polygon.position.y,40,40);
+
